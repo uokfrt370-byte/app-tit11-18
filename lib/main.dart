@@ -135,7 +135,7 @@ class HomePage extends StatelessWidget {
                     child: Column(
                       children: const [
                         Text(
-                          '10,000K',
+                          '178M',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
