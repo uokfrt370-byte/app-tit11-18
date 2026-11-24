@@ -1,0 +1,212 @@
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'My Social Profile',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+        ),
+        useMaterial3: true,
+      ),
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'txlrt_qq',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.menu),
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(12),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundColor: Colors.blue,
+                    child: ClipOval(
+                      child: Image.network(
+                        'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=300',
+                        width: 80,
+                        height: 80,
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return const Icon(
+                            Icons.directions_car,
+                            size: 40,
+                            color: Colors.white,
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                  Expanded(
+                    child: Column(
+                      children: const [
+                        Text(
+                          '24',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text('โพสต์'),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      children: const [
+                        Text(
+                          '10,000K',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text('ผู้ติดตาม'),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      children: const [
+                        Text(
+                          '598',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text('กำลังติดตาม'),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'methus ketsupasawam',
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    'ชอบฟังเพลง ชอบเที่ยว 🎧✈️',
+                    style: TextStyle(fontSize: 14),
+                  ),
+                  Text(
+                    'ใช้ชีวิตให้เต็มที่ ไปให้สุดทุกเส้นทาง 😎',
+                    style: TextStyle(fontSize: 14),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 12,
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white,
+                      ),
+                      child: const Text('ติดตาม'),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: OutlinedButton(
+                      onPressed: () {},
+                      child: const Text('ข้อความ'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.grid_on, size: 25),
+                Icon(
+                  Icons.person_outline,
+                  size: 25,
+                  color: Colors.grey,
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                  child: Image.network(
+                    'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400',
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Expanded(
+                  child: Image.network(
+                    'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400',
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Expanded(
+                  child: Image.network(
+                    'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=400',
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
