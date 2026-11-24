@@ -162,49 +162,26 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(12),
+            const Padding(
+              padding: EdgeInsets.all(12),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'methus ketsupasawam',
                     style: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 5),
-                  const Text(
+                  SizedBox(height: 5),
+                  Text(
                     'ชอบฟังเพลง ชอบเที่ยว 🎧✈️',
                     style: TextStyle(fontSize: 14),
                   ),
-                  const Text(
+                  Text(
                     'ใช้ชีวิตให้เต็มที่ ไปให้สุดทุกเส้นทาง 😎',
                     style: TextStyle(fontSize: 14),
-                  ),
-                  const SizedBox(height: 8),
-                  InkWell(
-                    onTap: () => _showImageSourceDialog(
-                      context,
-                      'รูปโปรไฟล์หลัก',
-                      'assets/profile.jpg',
-                    ),
-                    child: const Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Icon(Icons.link, size: 16, color: Colors.blue),
-                        SizedBox(width: 4),
-                        Text(
-                          'ที่มารูปโปรไฟล์: assets/profile.jpg',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.blue,
-                            decoration: TextDecoration.underline,
-                          ),
-                        ),
-                      ],
-                    ),
                   ),
                 ],
               ),
@@ -302,83 +279,6 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ],
-            ),
-            const SizedBox(height: 16),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 12),
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: Colors.grey.shade100,
-                borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: Colors.grey.shade300),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Row(
-                    children: [
-                      Icon(Icons.collections, size: 18, color: Colors.blue),
-                      SizedBox(width: 6),
-                      Text(
-                        'รายการที่มารูปโพสต์ทั้งหมด (สำหรับครูตรวจ)',
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 8),
-                  InkWell(
-                    onTap: () => _showImageSourceDialog(
-                      context,
-                      'รูปโพสต์ที่ 1 (รถ Giorno)',
-                      'assets/post1.jpg',
-                    ),
-                    child: const Text(
-                      '1. รูปโพสต์ที่ 1 (รถ Giorno): assets/post1.jpg',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.blue,
-                        decoration: TextDecoration.underline,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  InkWell(
-                    onTap: () => _showImageSourceDialog(
-                      context,
-                      'รูปโพสต์ที่ 2 (แต่งตัว/เดินทาง)',
-                      'assets/post2.jpg',
-                    ),
-                    child: const Text(
-                      '2. รูปโพสต์ที่ 2 (แต่งตัว/เดินทาง): assets/post2.jpg',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.blue,
-                        decoration: TextDecoration.underline,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  InkWell(
-                    onTap: () => _showImageSourceDialog(
-                      context,
-                      'รูปโพสต์ที่ 3 (วิวบนเครื่องบิน)',
-                      'assets/post3.jpg',
-                    ),
-                    child: const Text(
-                      '3. รูปโพสต์ที่ 3 (วิวบนเครื่องบิน): assets/post3.jpg',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.blue,
-                        decoration: TextDecoration.underline,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             ),
             const SizedBox(height: 20),
           ],
